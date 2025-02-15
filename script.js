@@ -1,6 +1,7 @@
 async function generateLetter() {
     const name = document.getElementById("name").value || "Mere Priye";
     const mood = document.getElementById("mood").value;
+    const len = document.getElementById("length").value;
     const senderName = "Programmer_AD"; // Sender name
     const apiKey = "AIzaSyCm39M8zTTYKS_WVsWYrKa0Ikgq54ElSA4"; // Replace with a valid API key
 
@@ -8,32 +9,32 @@ async function generateLetter() {
     let prompt = "";
     switch (mood) {
         case "romantic":
-            prompt = `Write a heartfelt letter to ${name} in a poetic and traditional Indian style.  
+            prompt = `Write a heartfelt letter to ${name} in a poetic and traditional Indian style in ${len}.  
             Make it a message of admiration, companionship, and deep affection, like in classic Hindi poetry or Bollywood songs.  
             Include references to Indian elements like the moon, ghazals, Radha-Krishna, and timeless devotion.  
             It should feel like a respectful and warm note rather than an overly passionate love letter.  
             End with "Tumhara hamesha, ${senderName}".`;
             break;
         case "funny":
-            prompt = `Write a humorous letter for ${name} with Indian-style humor.  
+            prompt = `Write a humorous letter for ${name} with Indian-style humor in ${len}.  
             Use desi jokes, funny references like Bollywood dialogues, chai, and jugaad.  
             Keep it witty and lighthearted while showing appreciation.  
             End with "Tera filmy dost, ${senderName}".`;
             break;
         case "self-love":
-            prompt = `Write an uplifting self-appreciation letter for ${name}, rooted in Indian culture.  
+            prompt = `Write an uplifting self-appreciation letter for ${name}, rooted in Indian culture in ${len}.  
             Include elements of mindfulness, spirituality, and self-care from Indian traditions like yoga and meditation.  
             Encourage self-worth using wisdom from ancient Indian teachings.  
             End with "Apne aap se pyaar karo, ${senderName}".`;
             break;
         case "sarcastic":
-            prompt = `Write a playful and sarcastic letter for ${name} in an Indian desi style.  
+            prompt = `Write a playful and sarcastic letter for ${name} in an Indian desi style in ${len}.
             Use humorous taunts like "Shaadi kab kar rahe ho?" or "Kahan kho gaye ho, WhatsApp pe last seen bhi nahi hai!".  
             Keep it fun, engaging, and friendly.  
             End with "Tumhara nakhrebaaz dost, ${senderName}".`;
             break;
         default:
-            prompt = `Write a warm and uplifting letter for ${name}, inspired by Indian traditions.  
+            prompt = `Write a warm and uplifting letter for ${name}, inspired by Indian traditions in ${len}.
             Use a respectful and friendly tone with positive words.  
             End with "Pyaar bhari shubhkamnayein, ${senderName}".`;
     }
